@@ -1,8 +1,7 @@
 # Python-SQL-password-manager
-This is a simple password manager made with python and SQL with help from teja156. Check out the original project here: https://github.com/teja156/python-password-manager/tree/main
+This is a simple password manager made with python and MariaDB with help from teja156. Project is essentially the same with some different functions added. I used teja156's video to learn more about password managers and start a project for experience, so much if not most of the project is the same is his. Check out the original project here: https://github.com/teja156/python-password-manager/tree/main
 
-# Python Password Manager
-
+# teja156's explanation of the project
 A simple local password manager written in Python and MariaDB. Uses [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2) to derive a 256 bit key from a MASTER PASSWORD and DEVICE SECRET to use with AES-256 for encrypting/decrypting.
 
 
@@ -42,7 +41,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'pm'@localhost IDENTIFIED BY 'password';
 [Pyperclip](https://pypi.org/project/pyperclip/) is a python module used to copy data to the clipboard. If you get a "not implemented error", follow this simple fix: https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error
 
 ## Windows
-### Install Python Requirements
+### Install Python Requirements (type this into command prompt)
 ```pip install -r requirements.txt```
 
 ### MariaDB
@@ -107,12 +106,17 @@ optional arguments:
                         Username
   --length LENGTH       Length of the password to generate
   -c, --copy            Copy password to clipboard
+  -d, --delete          Deletes entry according the 3 user inputs
 ```
 
 
 ### Add entry
 ```
 python pm.py add -s mysite -u mysite.com -e hello@email.com -l myusername
+```
+### Delete entry
+```
+python pm.py delete
 ```
 ### Retrieve entry
 ```
