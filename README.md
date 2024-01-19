@@ -4,6 +4,9 @@ This is a simple password manager made with python and MariaDB with help from te
 # teja156's explanation of the project
 A simple local password manager written in Python and MariaDB. Uses [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2) to derive a 256 bit key from a MASTER PASSWORD and DEVICE SECRET to use with AES-256 for encrypting/decrypting.
 
+#Why should you use this?
+Have you ever struggled to remember passwords, or have you used the same password for all your logins? This raises a problem for your account security. A password manager works by taking your added entries and stores them into a password vault on a database. Most people will say, "But, won't the database know my passwords and information? Why shouldn't I just keep this on my own device or write them down?". Well when using a password manager, your personal information will be encrypted and hashed over many iterations while it is stored in the database only retrievable when your device secret and master password is given. Even if someone was able to get the passwords while they were in the database they would have to go through (in this case) a million hashes of your original information which could take forever. Now, when utilizing a password manager, you only have to memorize one thing and that is a MASTER PASSWORD only you might know which will let you access all your account logins at your disposale. 
+
 # Known potential problem
 If you copy and paste your password when adding an entry, it will return a symbol when attempting to retreive your password. Please try to type your password instead while attempting to add an entry.
 
