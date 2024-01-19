@@ -5,7 +5,7 @@ This is a simple password manager made with python and MariaDB with help from te
 A simple local password manager written in Python and MariaDB. Uses [pbkdf2](https://en.wikipedia.org/wiki/PBKDF2) to derive a 256 bit key from a MASTER PASSWORD and DEVICE SECRET to use with AES-256 for encrypting/decrypting.
 
 # Known potential problem
-If you copy and paste your password when adding an entry it will return a symbol when attempting to retreive your password. Please try to type your password instead while attempting to add an entry.
+If you copy and paste your password when adding an entry, it will return a symbol when attempting to retreive your password. Please try to type your password instead while attempting to add an entry.
 
 # Installation
 You need to have python3 to run this on Windows, Linux or MacOS
